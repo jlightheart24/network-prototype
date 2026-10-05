@@ -1,0 +1,15 @@
+# Unity-generated files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+[Uu]serSettings/
+*.csproj
+*.sln
+*.slnx
+.DS_Store
+
+# Build-only outputs not needed in the repository
+/LinuxBuild/
+/networkPrototype.app/
+*_BurstDebugInformation_DoNotShip/
