@@ -20,6 +20,10 @@ public class PlayerController : NetworkBehaviour
         {
             int clientId = NetworkManager.ClientManager.Clients.Count - 1; 
             transform.Translate(new Vector3(4*clientId -6 , 0, 2 * clientId)); // Perform any client-specific initialization here
+
+            Camera mainCamera = Camera.main;
+            if (mainCamera != null && mainCamera.TryGetComponent(out FollowPlayer followPlayer))
+                followPlayer.SetPlayer(gameObject);
         }
     }
 

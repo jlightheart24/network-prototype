@@ -1506,9 +1506,9 @@ MonoBehaviour:
   _ipv4BindAddress: 5.78.151.41
   _enableIpv6: 1
   _ipv6BindAddress: 
-  _port: 7012
+  _port: 7040
   _maximumClients: 4095
-  _clientAddress: localhost
+  _clientAddress: 5.78.151.41
 --- !u!1001 &1067986125
 PrefabInstance:
   m_ObjectHideFlags: 0

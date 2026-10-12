@@ -14,10 +14,16 @@ public class FollowPlayer : MonoBehaviour
     void Start()
     {
         currentCameraPosition = offset;
-        transform.position = player.transform.position + offset;
+        if (player != null)
+            transform.position = player.transform.position + offset;
 
         SwitchCameraAction.Enable();
         SwitchCameraAction.performed += OnInputActionPerformed;
+    }
+
+    public void SetPlayer(GameObject target)
+    {
+        player = target;
     }
 
     void OnInputActionPerformed(InputAction.CallbackContext context)
@@ -36,6 +42,9 @@ public class FollowPlayer : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        if (player == null)
+            return;
+
         transform.position = player.transform.TransformPoint(currentCameraPosition);
         transform.LookAt(player.transform.TransformPoint(lookPosition));
     }

@@ -11,5 +11,7 @@
 
 # Build-only outputs not needed in the repository
 /LinuxBuild/
+/MacBuild/
 /networkPrototype.app/
+/jonny@unity.bartstander.com/
 *_BurstDebugInformation_DoNotShip/
